@@ -1,7 +1,7 @@
 .contenido{
-    background: #343A40;
+    background: #122131;
     display: grid;
-    padding: 10px;
+
 
     grid-template-columns: repeat(2 , 1fr);
     grid-template-rows: repeat(1, auto);
@@ -10,6 +10,8 @@
 .imagen{
     float: left;
     grid-area: imagen;
+    display: flex;
+    align-items: center;
 }
 
 .perfil{
@@ -45,4 +47,27 @@
     margin-top: 15px;
 }
 
+.lista{
+  background: #145388;
+
+}
+
+.reglon{
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  background: #122131;
+}
+
+.reglon:hover{
+  background: #5c87b6;
+}
+
+.reglon a{
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
 
