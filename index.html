@@ -49,9 +49,10 @@
                     <form>
                         <div class="col-md-8 mb-3">
                             <label>Mes:</label>
-                            <select class="form-control select-picker" name="mes" id="mes" required>
+                            <select class="form-control select-picker" id="nombre" required>
                               <option value="Enero">Enero</option>
                               <option value="Febrero">Febrero</option>
+                              <option value="Marzo">Marzo</option>
                               <option value="Abril">Abril</option>
                               <option value="Mayo">Mayo</option>
                               <option value="Junio">Junio</option>
@@ -65,20 +66,32 @@
                           </div>
                         <div class="col-md-8 mb-3">
                             <label  class="form-label">Monto</label>
-                            <input type="text" class="form-control" id="ape_paterno" >
+                            <input type="text" class="form-control" id="monto" >
                           </div>
-                          <div class="text-center">
+                          <div class="col-md-8 text-center">
                             <button type="button" class="btn btn-primary" onclick="Agregar()">Registrar</button>
                           </div>
                          
                       </form>
                 </div>
                 <div class="col-md-6">
-
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Mes</th>
+                            <th scope="col">Monto</th>
+                          </tr>
+                        </thead>
+                        <tbody id="tbl_ingresos">
+                        
+                        </tbody>
+                      </table>
                 </div>
             </div>
             
         </div>
     </div>
 </body>
+<script src="js/ingresos.js"></script>
 </html>
