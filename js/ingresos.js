@@ -1,6 +1,6 @@
 console.log("ingreso al js");
 
-const bd_Api = "http://ucamp.alumnos.dev4humans.com.mx";
+const bd_Api = "https://ucamp.alumnos.dev4humans.com.mx";
 const tbl_ingresos = document.getElementById("tbl_ingresos");
 
 cargar_lista = () => {
