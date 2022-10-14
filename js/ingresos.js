@@ -1,10 +1,10 @@
 console.log("ingreso al js");
 
-const bd_Api = "https://ucamp.alumnos.dev4humans.com.mx";
+const bd_Api = "http://ucamp.alumnos.dev4humans.com.mx";
 const tbl_ingresos = document.getElementById("tbl_ingresos");
 
 cargar_lista = () => {
-  fetch(bd_Api + "/Main/endpoint_ingresos_mensuales", { method: "GET" })
+  fetch(bd_Api + "/Main/endpoint_alumnos", { method: "GET" })
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
@@ -13,7 +13,7 @@ cargar_lista = () => {
         let tr = `<tr>
             <td>${ingreso.id}</td>
             <td>${ingreso.nombre}</td>
-            <td>${ingreso.monto}</td>
+            <td>${ingreso.calificacion}</td>
 
             </tr>`;
         tbl_ingresos.innerHTML += tr;
