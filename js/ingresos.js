@@ -35,7 +35,6 @@ Agregar = () => {
     "calificacion",
     document.getElementById("calificacion").value
   );
-
   fetch(bd_Api + "/Main/endpoint_alumnos", {
     method: "POST",
     body: form_data,
@@ -43,6 +42,7 @@ Agregar = () => {
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
+      limpiar_form();
       cargar_lista();
     })
     .catch((error) => {
