@@ -31,9 +31,12 @@ Agregar = () => {
   console.log("entro a agregar");
   let form_data = new FormData();
   form_data.append("nombre", document.getElementById("nombre").value);
-  form_data.append("monto", document.getElementById("monto").value);
+  form_data.append(
+    "calificacion",
+    document.getElementById("calificacion").value
+  );
 
-  fetch(bd_Api + "/Main/endpoint_ingresos_mensuales", {
+  fetch(bd_Api + "/Main/endpoint_alumnos", {
     method: "POST",
     body: form_data,
   })
@@ -48,7 +51,7 @@ Agregar = () => {
 };
 
 limpiar_form = () => {
-  document.getElementById("monto").value = "";
+  document.getElementById("calificacion").value = "";
 };
 
 cargar_lista();
