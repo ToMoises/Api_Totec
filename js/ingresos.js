@@ -5,7 +5,10 @@ const tbl_ingresos = document.getElementById("tbl_ingresos");
 const alumnos = document.getElementById("alumnos");
 
 cargar_lista = () => {
-  fetch(bd_Api + "/Main/endpoint_alumnos", { method: "GET" })
+  fetch(bd_Api + "/Main/endpoint_alumnos", {
+    method: "GET",
+    mode: "cors",
+  })
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
