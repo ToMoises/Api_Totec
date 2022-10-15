@@ -32,7 +32,10 @@ cargar_lista = () => {
 };
 
 cargar_lista_card = () => {
-  fetch(bd_Api + "/Main/endpoint_alumnos", { method: "GET" })
+  fetch(bd_Api + "/Main/endpoint_alumnos", {
+    method: "GET",
+    mode: "cors",
+  })
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
