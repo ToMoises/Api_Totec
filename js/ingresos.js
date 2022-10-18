@@ -42,7 +42,8 @@ cargar_lista_card = () => {
       alumnos.innerHTML = "";
       for (const ingreso of result.data) {
         let div = `
-        <div class="present col-md-5 card" >
+        <div class="present col-md-3 card" >
+        <span></span>
            <img src="img/perfil.png" alt="perfil">
             <small>codigo</small>
             <small>${ingreso.id}</small>
@@ -63,6 +64,7 @@ cargar_lista_card = () => {
     });
 };
 
+/*
 Agregar = () => {
   console.log("entro a agregar");
   let form_data = new FormData();
@@ -90,6 +92,6 @@ Agregar = () => {
 limpiar_form = () => {
   document.getElementById("calificacion").value = "";
 };
-
+*/
 cargar_lista();
 cargar_lista_card();

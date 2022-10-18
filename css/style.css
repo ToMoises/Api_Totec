@@ -71,6 +71,12 @@
   font-weight: bold;
 }
 
+.estu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: grey;
+}
 .present{
   display: flex;
   justify-content: center;
@@ -82,4 +88,5 @@
   width: 70px;
   height: 70px;
 }
+
 
