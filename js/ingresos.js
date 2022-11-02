@@ -1,23 +1,22 @@
 console.log("ingreso al js");
-
-const bd_Api = "http://ucamp.alumnos.dev4humans.com.mx";
+const key_publica = "71b9c455b2db1a44f45b6f0be9c16729";
+const key_privada = "f316b0a4baf66cd8eb06cf0f9b4c34e390882211";
+const api_marvel =
+  "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=71b9c455b2db1a44f45b6f0be9c16729&hash=b37207cc6fe7cf8d6ccfdbfd66e24727";
 const tbl_ingresos = document.getElementById("tbl_ingresos");
 const alumnos = document.getElementById("alumnos");
 
 cargar_lista = () => {
-  fetch(bd_Api + "/Main/endpoint_alumnos", {
-    method: "GET",
-    mode: "cors",
-  })
+  fetch(api_marvel)
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
       tbl_ingresos.innerHTML = "";
-      for (const ingreso of result.data) {
+      for (const marvel of result.data.results) {
         let tr = `<tr>
-            <td>${ingreso.id}</td>
-            <td>${ingreso.nombre}</td>
-            <td>${ingreso.calificacion}</td>
+            <td>${marvel.id}</td>
+            <td>${marvel.name}</td>
+            <td>${marvel.description}</td>
 
             </tr>`;
         tbl_ingresos.innerHTML += tr;
@@ -32,7 +31,7 @@ cargar_lista = () => {
 };
 
 cargar_lista_card = () => {
-  fetch(bd_Api + "/Main/endpoint_alumnos", {
+  fetch(api_marvel, {
     method: "GET",
     mode: "cors",
   })

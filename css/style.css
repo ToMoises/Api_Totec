@@ -23,6 +23,10 @@
     grid-template-rows: repeat(1, auto);
     grid-template-areas: "p1 p2 p3";
 }
+.marvel{
+  width: 360px;
+  height: 160px;
+}
 
 .p1{
     float: right;
