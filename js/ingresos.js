@@ -30,6 +30,7 @@ cargar_lista = () => {
     });
 };
 
+/*
 cargar_lista_card = () => {
   fetch(api_marvel, {
     method: "GET",
@@ -62,6 +63,7 @@ cargar_lista_card = () => {
       console.log(error);
     });
 };
+*/
 
 /*
 Agregar = () => {
