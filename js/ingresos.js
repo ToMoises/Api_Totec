@@ -15,6 +15,9 @@ cargar_lista = () => {
       for (const marvel of result.data.results) {
         let tr = `<tr>
             <td>${marvel.id}</td>
+            <td>
+            <img class="img_marvel" src=" ${marvel.thumbnail.path}.${marvel.thumbnail.extension}">
+            </td>
             <td>${marvel.name}</td>
             <td>${marvel.description}</td>
 

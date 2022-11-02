@@ -56,8 +56,21 @@
 
 }
 
+.img_marvel{
+height: 80px;
+width: 80px;
+}
+
+.section{
+  scroll-margin-top: 8ex;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
 .reglon{
-  margin: 15px;
+  margin: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
