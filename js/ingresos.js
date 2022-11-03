@@ -63,34 +63,5 @@ cargar_lista_card = () => {
     });
 };
 
-/*
-Agregar = () => {
-  console.log("entro a agregar");
-  let form_data = new FormData();
-  form_data.append("nombre", document.getElementById("nombre").value);
-  form_data.append(
-    "calificacion",
-    document.getElementById("calificacion").value
-  );
-  fetch(bd_Api + "/Main/endpoint_alumnos", {
-    method: "POST",
-    mode: "cors",
-    body: form_data,
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      console.log(result);
-      limpiar_form();
-      cargar_lista();
-    })
-    .catch((error) => {
-      console.log("Error detectado");
-    });
-};
-
-limpiar_form = () => {
-  document.getElementById("calificacion").value = "";
-};
-*/
 cargar_lista();
 cargar_lista_card();

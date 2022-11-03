@@ -53,6 +53,7 @@
 
 .lista{
   background: #145388;
+  height: 695px;
 
 }
 
@@ -92,6 +93,10 @@ html{
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+.reglon img{
+  height: 70px;
+  width: 70px;
 }
 
 .estu{
