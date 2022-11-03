@@ -61,6 +61,12 @@ height: 80px;
 width: 80px;
 }
 
+.present img{
+  height: 120px;
+  width: 120px;
+  border-radius: 25%;
+  }
+
 .section{
   scroll-margin-top: 8ex;
 }

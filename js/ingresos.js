@@ -43,15 +43,13 @@ cargar_lista_card = () => {
       alumnos.innerHTML = "";
       for (const marvel of result.data.results) {
         let div = `
-        <div class="present col-md-3 card" >
-        <span></span>
-           <img class="img_marvel" src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}">
-            <small>codigo</small>
+        <div class="present col-md-5 card  text-center" >
+        
+           <img src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}">
+            <small class="font-weight-bold">codigo</small>
             <small>${marvel.id}</small>
-            <small>Nombre Completo</small>
+            <small class="font-weight-bold">Titulo</small>
             <small>${marvel.title}</small>
-            <small>Nota</small>
-
         </div>
             `;
         alumnos.innerHTML += div;
