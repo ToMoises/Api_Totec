@@ -3,6 +3,8 @@ const key_publica = "71b9c455b2db1a44f45b6f0be9c16729";
 const key_privada = "f316b0a4baf66cd8eb06cf0f9b4c34e390882211";
 const api_marvel =
   "https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=71b9c455b2db1a44f45b6f0be9c16729&hash=b37207cc6fe7cf8d6ccfdbfd66e24727";
+const api_marvel_comics =
+  "https://gateway.marvel.com:443/v1/public/comics?ts=1&apikey=71b9c455b2db1a44f45b6f0be9c16729&hash=b37207cc6fe7cf8d6ccfdbfd66e24727";
 const tbl_ingresos = document.getElementById("tbl_ingresos");
 const alumnos = document.getElementById("alumnos");
 
@@ -33,27 +35,23 @@ cargar_lista = () => {
     });
 };
 
-/*
 cargar_lista_card = () => {
-  fetch(api_marvel, {
-    method: "GET",
-    mode: "cors",
-  })
+  fetch(api_marvel_comics)
     .then((response) => response.json())
     .then((result) => {
       console.log(result);
       alumnos.innerHTML = "";
-      for (const ingreso of result.data) {
+      for (const marvel of result.data.results) {
         let div = `
         <div class="present col-md-3 card" >
         <span></span>
-           <img src="img/perfil.png" alt="perfil">
+           <img class="img_marvel" src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}">
             <small>codigo</small>
-            <small>${ingreso.id}</small>
+            <small>${marvel.id}</small>
             <small>Nombre Completo</small>
-            <small>${ingreso.nombre}</small>
+            <small>${marvel.title}</small>
             <small>Nota</small>
-            <p>${ingreso.calificacion}</p>
+
         </div>
             `;
         alumnos.innerHTML += div;
@@ -66,7 +64,6 @@ cargar_lista_card = () => {
       console.log(error);
     });
 };
-*/
 
 /*
 Agregar = () => {
