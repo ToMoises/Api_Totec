@@ -144,8 +144,13 @@ html{
 }
 
 .img-res{
-  width: 343px;
+  width: 350px;
   height: auto;
+}
+.res1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 }
