@@ -33,28 +33,14 @@
     grid-area: p1;
     display: grid;
     padding: 0px;
-    grid-template-columns: repeat(2 , 1fr);
-    grid-template-rows: repeat(1, auto);
-    grid-template-areas: "img h5";
-
-}
-.p1 h5{
-    margin-top: 10px;
-}
-.p2{
-    display: grid;
-    justify-content: end;
-}
-.p2 img{
-    width: 60px;
-    height: 60px;
-    margin-top: 15px;
 }
 
 .lista{
   background: #145388;
   height: 695px;
-
+  position: -webkit-sticky;
+  position: sticky;
+  top: -5px;
 }
 
 .img_marvel{
@@ -118,3 +104,43 @@ html{
 }
 
 
+@media only screen and (max-width: 769px) {
+  .contenido{
+    background: #122131;
+    display: grid;
+
+
+    grid-template-columns: repeat(1 , 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "imagen imagen" 
+                          "perfil perfil";
+}
+.imagen{
+    grid-area: imagen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.perfil{
+    grid-area: perfil;
+    display: grid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.marvel{
+  width: 360px;
+  height: 160px;
+}
+
+
+
+.lista{
+  background: #145388;
+  height: 695px;
+  position: static;
+}
+
+}
