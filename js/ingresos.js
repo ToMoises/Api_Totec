@@ -83,7 +83,7 @@ cargar_chart = () => {
           labels: name,
           datasets: [
             {
-              label: "# PRECIOS",
+              label: "# PRECIOS $",
               data: precio,
               backgroundColor: [
                 "rgba(255, 99, 132, 0.2)",
