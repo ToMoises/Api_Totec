@@ -13,6 +13,8 @@ const api_marvel_comic_precio =
 const tbl_ingresos = document.getElementById("tbl_ingresos");
 const alumnos = document.getElementById("alumnos");
 const ctx = document.getElementById("myChart").getContext("2d");
+const loader = document.getElementById("loader");
+const precios = document.getElementById("precios");
 
 cargar_lista = () => {
   fetch(api_marvel)
@@ -49,14 +51,26 @@ cargar_lista_card = () => {
       alumnos.innerHTML = "";
       for (const marvel of result.data.results) {
         let div = `
-        <div class="present col-md-5 card  text-center" >
-        
-           <img src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}">
-            <small class="font-weight-bold">codigo</small>
-            <small>${marvel.id}</small>
-            <small class="font-weight-bold">Titulo</small>
-            <small>${marvel.title}</small>
+        <div class="col-md-6 text-center">
+        <div class="card mb-3" style="max-width: 420px">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="${marvel.thumbnail.path}.${marvel.thumbnail.extension}" class="img-fluid rounded-start" alt="..." />
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">${marvel.id}</h5>
+                <p class="card-text">
+                ${marvel.title}
+                </p>
+                <p class="card-text">
+                  <small class="text-muted">${marvel.variantDescription}</small>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
             `;
         alumnos.innerHTML += div;
       }
@@ -114,6 +128,10 @@ cargar_chart = () => {
           },
         },
       });
+      setTimeout(() => {
+        loader.classList.add("d-none");
+        precios.classList.remove("d-none");
+      }, 7000);
     });
 };
 
